@@ -520,7 +520,6 @@ button:focus {
   height: 100%;
   transform: translateY(100%);
   overflow: auto;
-
   display: inline-block;
   transition-duration: var(--transition-duration);
 }
@@ -585,7 +584,7 @@ button:focus {
 }
 
 .footer-subtitle {
-  max-width: 264px;
+  width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -678,6 +677,20 @@ button:focus {
   text-align: center;
   cursor: pointer;
   margin-bottom: 24px;
+  transition: background-color var(--transition-duration)
+    cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon {
+  transition: background-color var(--transition-duration)
+    cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover,
+.modal-icon:hover {
+  fill: #ffffff;
+  background-color: var(--accent-color);
+  transition: background-color var(--transition-duration)
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -742,7 +755,7 @@ button:focus {
 
 .modal-comment {
   width: 100%;
-  height: 138px;
+  height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-size: 12px;
@@ -783,7 +796,9 @@ button:focus {
   border-radius: 2px;
   fill: #f4f4fd;
 }
-
+.check-policy {
+  color: var(--accent-color);
+}
 .modal-form-submit {
   min-width: 169px;
   padding: 16px 32px;
@@ -851,6 +866,7 @@ button:focus {
   font-size: 12px;
   line-height: 0.1;
   color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
 }
 
 .button-subscribe {
